@@ -1,10 +1,10 @@
 from datetime import date, datetime
 
-from streaming.users import User, FreeUser, PremiumUser, FamilyAccountUser, FamilyMember
-from streaming.sessions import ListeningSession
-from streaming.tracks import Track
-from streaming.artists import Artist
-from streaming.tracks import SingleRelease
+from src.streaming.users import User, FreeUser, PremiumUser, FamilyAccountUser, FamilyMember
+from src.streaming.sessions import ListeningSession
+from src.streaming.tracks import Track
+from src.streaming.artists import Artist
+from src.streaming.tracks import SingleRelease
 
 
 class TestUsers:
