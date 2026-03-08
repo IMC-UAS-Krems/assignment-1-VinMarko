@@ -19,6 +19,9 @@ class ListeningSession:
         self.duration_listened_seconds = duration_listened_seconds
 
     def duration_listened_minutes(self) -> float:
-        return 0.0
+        return self.duration_listened_seconds / 60.0
+
+
+        
 
 

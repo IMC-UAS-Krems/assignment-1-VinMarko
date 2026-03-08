@@ -7,41 +7,46 @@ Classes to implement:
   - Playlist
     - CollaborativePlaylist
 """
+from tracks import Track
 
 
 class Playlist :
 
-    def __init__(self, playlist_id:str, name:str, owner, tracks):
+    def __init__(self, playlist_id:str, name:str, owner, tracks: list[Track]):
         self.playlist_id = playlist_id
         self.name = name
         self.owner = owner
         self.tracks = tracks
 
 
-    def add_track(track):
-        pass
+    def add_track(self,track):
+        return self.tracks.append(track)
 
-    def remove_track(track_id):
-        pass
+    def remove_track(self,track_id):
+        for track in self.tracks:
+            if track.track_id == track_id:
+                self.tracks.remove(track)
+                return
 
 
     def total_duration_seconds(self) -> int:
-        return 0
+        return sum(track.duration_seconds for track in self.tracks)
 
 
 
 class CollaborativePlaylist(Playlist):
 
-    def __init__(self, contributors):
+    def __init__(self, contributors: list[str]):
 
         super().__init__(playlist_id="", name="", owner="", tracks=[])
         self.contributors = contributors
 
-    def add_contributor(user):
-        pass
+    def add_contributor(self,user):
+        return self.contributors.append(user)
 
-    def remove_contributor(user):
-        pass
+    def remove_contributor(self,user):
+        if user in self.contributors:
+            self.contributors.remove(user)
 
 
 

@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import datetime
 
+from systemd.login import sessions
+
 """
 
 users.py
@@ -16,29 +18,34 @@ Classes to implement:
     - FamilyMember
 """
 from src.streaming.sessions import ListeningSession
+from sessions import ListeningSession
 
 
 class User:
 
-    def __init__(self, user_id:str, name:str, age:int, sessions:list[ListeningSession]):
+    def __init__(self, user_id:str, name:str, age:int, sessions):
         self.user_id = user_id
         self.name = name
         self.age = age
-        self.sessions = sessions
+        self.sessions: list[ListeningSession] = []
 
-    def add_session(session):
-        pass
+
+    def add_session(self,session):
+        self.sessions.append(session)
 
 
     def total_listening_seconds(self) -> int:
-        pass
+        total = 0
+        for session in self.sessions:
+            total += session.duration_listened_seconds
+        return total
 
 
     def total_listening_minutes(self) -> float:
-        pass
+        return sum(session.duration_listened_minutes() for session in self.sessions)
 
     def unique_tracks_listened(self) -> set[str]:
-        pass
+        return set(session.track.track_id for session in self.sessions)
 
 
 
@@ -56,6 +63,18 @@ class FamilyAccountUser(User):
     def __init__(self, sub_users:list[FamilyMember]):
         super().__init__(user_id="", name="", age=0, sessions=[])
         self.sub_users = sub_users
+
+        def add_sub_user(self,sub_user):
+            self.sub_users.append(sub_user)
+
+
+
+        def all_members(slef) -> list[User]:
+            return [self] + self.sub_users
+
+
+
+
 
 
 class FamilyMember(User):
