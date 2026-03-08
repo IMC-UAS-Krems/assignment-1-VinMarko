@@ -6,11 +6,12 @@ Implement the Artist class representing musicians and content creators.
 Classes to implement:
   - Artist
 """
+from streaming.tracks import Track
 
 
 class Artist :
 
-    def __init__(self, artist_id:str, name:str, genre:str, tracks):
+    def __init__(self, artist_id:str, name:str, genre:str, tracks: list[Track] | None = None):
         self.artist_id = artist_id
         self.name = name
         self.genre = genre
@@ -19,9 +20,10 @@ class Artist :
 
 
 
-    def add_track(track):
-        pass
+    def add_track(self,track : Track):
+        self.tracks.append(track)
+
 
     def track_count(self) -> int:
-        return 0
+        return len(self.tracks)
 

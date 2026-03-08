@@ -16,9 +16,9 @@ class Album:
         self.title = title
         self.artist = artist
         self.release_year = release_year
-        self.tracks = tracks if tracks is not None else []
+        self.tracks = list(tracks) if tracks is not None else []
 
-    def add_track(self, track) -> None:
+    def add_track(self, track: AlbumTrack) -> None:
         track.album = self
         self.tracks.append(track)
 
