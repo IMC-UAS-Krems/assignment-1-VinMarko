@@ -5,7 +5,9 @@ Implement the Album class for collections of AlbumTrack objects.
 
 Classes to implement:
   - Album
+
 """
+from __future__ import annotations
 from streaming.artists import Artist
 from streaming.tracks import AlbumTrack
 

@@ -13,6 +13,7 @@ Classes to implement:
       - NarrativeEpisode
     - AudiobookTrack
 """
+from __future__ import annotations
 from datetime import date
 
 from streaming.albums import Album

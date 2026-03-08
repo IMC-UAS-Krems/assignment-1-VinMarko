@@ -3,7 +3,7 @@ conftest.py
 -----------
 Shared pytest fixtures used by both the public and private test suites.
 """
-
+from __future__ import annotations
 import pytest
 from datetime import date, datetime, timedelta
 
