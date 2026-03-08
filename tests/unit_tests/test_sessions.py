@@ -1,8 +1,8 @@
 from datetime import datetime
 
-from src.streaming.sessions import ListeningSession
-from src.streaming.users import FreeUser
-from src.streaming.tracks import Track
+from streaming.sessions import ListeningSession
+from streaming.users import FreeUser
+from streaming.tracks import Track
 
 
 class TestSessions:

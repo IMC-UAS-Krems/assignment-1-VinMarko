@@ -1,9 +1,3 @@
-from __future__ import annotations
-
-import datetime
-
-from systemd.login import sessions
-
 """
 
 users.py
@@ -17,8 +11,7 @@ Classes to implement:
     - FamilyAccountUser
     - FamilyMember
 """
-from src.streaming.sessions import ListeningSession
-from sessions import ListeningSession
+
 
 
 class User:

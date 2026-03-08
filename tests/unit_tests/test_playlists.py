@@ -1,6 +1,6 @@
-from src.streaming.playlists import Playlist, CollaborativePlaylist
-from src.streaming.tracks import Track
-from src.streaming.users import FreeUser
+from streaming.playlists import Playlist, CollaborativePlaylist
+from streaming.tracks import Track
+from streaming.users import FreeUser
 
 
 class TestPlaylists:

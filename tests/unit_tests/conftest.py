@@ -1,11 +1,10 @@
 import pytest
 from datetime import date
 
-from src.streaming.artists import Artist
-from src.streaming.tracks import AlbumTrack, SingleRelease
-from src.streaming.albums import Album
-from src.streaming.users import FreeUser, PremiumUser, FamilyAccountUser, FamilyMember
-
+from streaming.artists import Artist
+from streaming.tracks import AlbumTrack, SingleRelease
+from streaming.albums import Album
+from streaming.users import FreeUser, PremiumUser, FamilyAccountUser, FamilyMember
 
 @pytest.fixture
 def artist_a() -> Artist:

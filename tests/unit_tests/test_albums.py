@@ -1,6 +1,6 @@
-from src.streaming.albums import Album
-from src.streaming.tracks import AlbumTrack
-from src.streaming.artists import Artist
+from streaming.albums import Album
+from streaming.tracks import AlbumTrack
+from streaming.artists import Artist
 
 
 class TestAlbums:

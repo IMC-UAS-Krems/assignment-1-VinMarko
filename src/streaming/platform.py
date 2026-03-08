@@ -7,14 +7,6 @@ and provides query methods for analytics.
 Classes to implement:
   - StreamingPlatform
 """
-from __future__ import annotations
-
-from src.streaming.albums import Album
-from src.streaming.artists import Artist
-from src.streaming.playlists import Playlist
-from src.streaming.sessions import ListeningSession
-from src.streaming.tracks import Track
-from src.streaming.users import User
 
 
 class StreamingPlatform:
@@ -28,6 +20,8 @@ class StreamingPlatform:
         self._playlists = dict[str,Playlist]
         self._sessions = list[ListeningSession]
 
+    def add_album(self, album: "Album"):  # csak type hint
+        pass
 
     def add_track(track):
         pass

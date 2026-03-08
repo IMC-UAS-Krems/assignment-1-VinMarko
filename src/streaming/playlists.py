@@ -7,7 +7,7 @@ Classes to implement:
   - Playlist
     - CollaborativePlaylist
 """
-from tracks import Track
+
 
 
 class Playlist :
