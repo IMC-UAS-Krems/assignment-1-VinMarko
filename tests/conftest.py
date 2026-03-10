@@ -3,23 +3,23 @@ conftest.py
 -----------
 Shared pytest fixtures used by both the public and private test suites.
 """
-from __future__ import annotations
+
 import pytest
 from datetime import date, datetime, timedelta
 
-from streaming.platform import StreamingPlatform
-from streaming.artists import Artist
-from streaming.albums import Album
-from streaming.tracks import (
+from src.streaming.platform import StreamingPlatform
+from src.streaming.artists import Artist
+from src.streaming.albums import Album
+from src.streaming.tracks import (
     AlbumTrack,
     SingleRelease,
     InterviewEpisode,
     NarrativeEpisode,
     AudiobookTrack,
 )
-from streaming.users import FreeUser, PremiumUser, FamilyAccountUser, FamilyMember
-from streaming.sessions import ListeningSession
-from streaming.playlists import Playlist, CollaborativePlaylist
+from src.streaming.users import FreeUser, PremiumUser, FamilyAccountUser, FamilyMember
+from src.streaming.sessions import ListeningSession
+from src.streaming.playlists import Playlist, CollaborativePlaylist
 
 
 # ---------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 from datetime import date
 
-from streaming.tracks import (
+from src.streaming.tracks import (
     Track,
     Song,
     SingleRelease,
@@ -10,7 +10,7 @@ from streaming.tracks import (
     NarrativeEpisode,
     AudiobookTrack,
 )
-from streaming.artists import Artist
+from src.streaming.artists import Artist
 
 
 class TestTracks:

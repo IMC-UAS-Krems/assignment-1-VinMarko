@@ -1,5 +1,5 @@
-from streaming.artists import Artist
-from streaming.tracks import Track
+from src.streaming.artists import Artist
+from src.streaming.tracks import Track
 
 
 class TestArtists:
