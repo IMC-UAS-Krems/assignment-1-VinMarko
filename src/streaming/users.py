@@ -11,8 +11,12 @@ Classes to implement:
     - FamilyAccountUser
     - FamilyMember
 """
+from __future__ import annotations
 from datetime import date
-from streaming.sessions import ListeningSession
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from streaming.sessions import ListeningSession
 
 
 class User:

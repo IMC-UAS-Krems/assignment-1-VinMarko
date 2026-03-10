@@ -13,14 +13,18 @@ Classes to implement:
       - NarrativeEpisode
     - AudiobookTrack
 """
+
 from __future__ import annotations
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from streaming.albums import Album
+    from streaming.artists import Artist
 from datetime import date
 
-from streaming.albums import Album
 
 from abc import ABC
 
-from streaming.artists import Artist
 
 
 class Track(ABC):

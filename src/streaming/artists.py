@@ -6,8 +6,13 @@ Implement the Artist class representing musicians and content creators.
 Classes to implement:
   - Artist
 """
-from streaming.tracks import Track
 
+
+from __future__ import annotations
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from streaming.tracks import Track
 
 class Artist :
 

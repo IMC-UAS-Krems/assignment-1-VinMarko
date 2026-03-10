@@ -6,10 +6,15 @@ Implement the ListeningSession class for recording listening events.
 Classes to implement:
   - ListeningSession
 """
+from __future__ import annotations
+
 from datetime import datetime
 
-from streaming.tracks import Track
-from streaming.users import User
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from streaming.tracks import Track
+    from streaming.users import User
 
 
 class ListeningSession:

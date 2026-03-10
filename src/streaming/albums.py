@@ -7,9 +7,15 @@ Classes to implement:
   - Album
 
 """
+
 from __future__ import annotations
-from streaming.artists import Artist
-from streaming.tracks import AlbumTrack
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from streaming.artists import Artist
+    from streaming.tracks import AlbumTrack
+
+
 
 
 class Album:
