@@ -81,7 +81,7 @@ class FamilyAccountUser(PremiumUser):
         user_id: str,
         name: str,
         age: int,
-        subscription_start: date,
+        subscription_start: date | None = None,
         sub_users: list["FamilyMember"] | None = None,
         sessions: list[ListeningSession] | None = None
     ):

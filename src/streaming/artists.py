@@ -20,7 +20,7 @@ class Artist :
         self.artist_id = artist_id
         self.name = name
         self.genre = genre
-        self.tracks = tracks
+        self.tracks = list(tracks) if tracks is not None else []
 
 
 
@@ -31,4 +31,8 @@ class Artist :
 
     def track_count(self) -> int:
         return len(self.tracks)
+
+
+
+
 

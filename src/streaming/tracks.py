@@ -38,6 +38,11 @@ class Track(ABC):
     def duration_minutes(self) -> float:
         return self.duration_seconds / 60
 
+    def __eq__(self, other) -> bool:
+        if not isinstance(other, Track):
+            return False
+        return self.track_id == other.track_id
+
 
 
 
@@ -48,7 +53,7 @@ class Song(Track):
 
 
 class Podcast(Track):
-    def __init__(self, track_id: str, title: str, duration_seconds: int, genre: str, host: str, description: str):
+    def __init__(self, track_id: str, title: str, duration_seconds: int, genre: str, host: str, description: str | None = ""):
         super().__init__(track_id, title, duration_seconds, genre)
         self.host = host
         self.description = description
@@ -102,9 +107,10 @@ class NarrativeEpisode(Podcast):
         duration_seconds: int,
         genre: str,
         host: str,
-        description: str,
         season: int,
-        episode_number: int
+        episode_number: int,
+        description: str | None = "",
+
     ):
         super().__init__(track_id, title, duration_seconds, genre, host, description)
         self.season = season
@@ -120,11 +126,13 @@ class InterviewEpisode(Podcast):
         duration_seconds: int,
         genre: str,
         host: str,
-        description: str,
-        guest: str
+        guest: str,
+        description: str | None = "",
+
     ):
         super().__init__(track_id, title, duration_seconds, genre, host, description)
         self.guest = guest
+        self.description = description if description is not None else[]
 
 
 

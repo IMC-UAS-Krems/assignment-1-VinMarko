@@ -29,6 +29,7 @@ class Album:
     def add_track(self, track: AlbumTrack) -> None:
         track.album = self
         self.tracks.append(track)
+        self.tracks.sort(key=lambda t: t.track_number)
 
     def track_ids(self) -> set[str]:
         return {track.track_id for track in self.tracks}
