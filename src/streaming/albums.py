@@ -38,5 +38,5 @@ class Album:
         return sum(track.duration_seconds for track in self.tracks)
 
 
-
+#added for first deadline
 
